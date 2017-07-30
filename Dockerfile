@@ -3,7 +3,7 @@ FROM centos:7
 RUN mkdir /data
 WORKDIR /usr/local
 
-RUN yum install -y wget && yum install -y xorg-x11-fonts-75dpi && yum install -y xorg-x11-fonts-Type1
+RUN yum install -y wget,libpng,libjpeg,openssl,icu,libX11,libXext,libXrender,xorg-x11-fonts-Type1,xorg-x11-fonts-75dpi
 RUN wget https://bitbucket.org/wkhtmltopdf/wkhtmltopdf/downloads/wkhtmltox-0.13.0-alpha-7b36694_linux-centos7-amd64.rpm && \
     rpm -Uvh wkhtmltox-0.13.0-alpha-7b36694_linux-centos7-amd64.rpm && rm -rf wkhtmltox-0.13.0-alpha-7b36694_linux-centos7-amd64.rpm
 RUN wget https://jaist.dl.sourceforge.net/project/leanote-bin/2.5/leanote-linux-amd64-v2.5.bin.tar.gz && \
