@@ -7,7 +7,8 @@ Leanote Docker
       数据以及配置文件位于/data/mongodb
 ## 方法二：将数据以及配置文件挂载到宿主机器，启动方式为：
       docker run --name leanote -p 9000:9000 \
-      -v /data/mongodb/conf:/data/mongodb/conf \ 
+      -v /data/mongodb/conf:/data/mongodb/conf \
       -v /data/mongodb/data:/data/mongodb/data \
       -v /data/leanote/conf:/usr/local/leanote/conf \
-      -d xiaobailong/Leanote
+      -v /data/leanote/mongodb_backup:/usr/local/leanote/mongodb_backup \
+      -d xiaobailong/leanote
