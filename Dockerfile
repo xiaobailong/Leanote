@@ -28,4 +28,4 @@ COPY mongodb.conf /data/mongodb/conf/mongodb.conf
 RUN source /etc/profile && mongod -f /data/mongodb/conf/mongodb.conf && mongorestore -h localhost -d leanote --dir /usr/local/leanote/mongodb_backup/leanote_install_data/
 COPY app.conf /usr/local/leanote/conf/app.conf
 
-CMD source /etc/profile && mongod -f /data/mongodb/conf/mongodb.conf && bash /usr/local/leanote/bin/run.sh
+CMD source /etc/profile && bash /usr/local/leanote/bin/run.sh
