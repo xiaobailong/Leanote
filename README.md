@@ -20,3 +20,4 @@ Leanote Docker
   -v /data/leanote/mongodb_backup:/usr/local/leanote/mongodb_backup \
   -e MONGO_URL_IP="127.0.0.1" \
   -d xiaobailong/leanote
+  
