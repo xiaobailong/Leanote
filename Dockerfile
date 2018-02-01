@@ -16,7 +16,7 @@ RUN wget https://bitbucket.org/wkhtmltopdf/wkhtmltopdf/downloads/wkhtmltox-0.13.
     rpm -Uvh wkhtmltox-0.13.0-alpha-7b36694_linux-centos7-amd64.rpm && rm -f wkhtmltox-0.13.0-alpha-7b36694_linux-centos7-amd64.rpm
 
 RUN wget https://jaist.dl.sourceforge.net/project/leanote-bin/2.6/leanote-linux-amd64-v2.6.bin.tar.gz && \
-RUN tar -xzvf leanote-linux-amd64-v2.6.bin.tar.gz && rm -f leanote-linux-amd64-v2.6.bin.tar.gz
+    tar -xzvf leanote-linux-amd64-v2.6.bin.tar.gz && rm -f leanote-linux-amd64-v2.6.bin.tar.gz
 COPY app.conf /usr/local/leanote/conf/app.conf
 COPY ./init.sh /usr/local/leanote/bin/init.sh
 
