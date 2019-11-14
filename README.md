@@ -40,6 +40,5 @@ docker run -d --name mongodb -p 27017:27017 -v /data/mongodb/db:/data/db -e AUTH
 docker run --name leanote -p 9000:80 \
     -v /data/leanote/conf:/usr/local/leanote/conf \
     -v /data/leanote/mongodb_backup:/usr/local/leanote/mongodb_backup \
-    -e MONGO_URL_IP="127.0.0.1" \
     -d xiaobailong/leanote
 ```
